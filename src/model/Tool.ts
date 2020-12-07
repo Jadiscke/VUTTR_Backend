@@ -7,8 +7,8 @@ const toolsSchema = new Schema({
   tags: [String],
 });
 
-const Tools = db.model("Tool", toolsSchema);
+const Tool = db.model("Tool", toolsSchema);
 
 export { toolsSchema };
 
-export default Tools;
+export default Tool;
