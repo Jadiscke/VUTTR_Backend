@@ -1,5 +1,11 @@
 import { Schema } from "mongoose";
-import db from "../database/Database";
+import db from "../database";
+interface tools {
+  title: string;
+  link: string;
+  description: string;
+  tags: Array<String>;
+}
 const toolsSchema = new Schema({
   title: String,
   link: String,
@@ -9,6 +15,6 @@ const toolsSchema = new Schema({
 
 const Tool = db.model("Tool", toolsSchema);
 
-export { toolsSchema };
+export { toolsSchema, tools };
 
 export default Tool;
