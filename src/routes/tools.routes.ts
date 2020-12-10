@@ -7,5 +7,7 @@ const PATH = "/tools";
 const routes = Router();
 
 routes.get(PATH, toolsController.getAll);
+routes.post(PATH, toolsController.create);
+routes.delete(PATH + "/:id", toolsController.delete);
 
 export default routes;
