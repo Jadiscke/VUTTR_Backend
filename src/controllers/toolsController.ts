@@ -19,7 +19,7 @@ class ToolController {
       const newTool = new Tool(tool);
       const newToolID = (await newTool.save()).id;
 
-      return response.status(201).json({ id: newToolID });
+      return response.status(201).json(newTool);
     } catch (error) {
       return response.status(400).json({ error });
     }
