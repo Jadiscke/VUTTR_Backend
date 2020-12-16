@@ -60,6 +60,21 @@ class ToolController {
       });
     }
   }
+  async updateOne(
+    request: Request,
+    response: Response
+  ): Promise<Response<any>> {
+    const { id } = request.params;
+    const body = request.body;
+
+    try {
+      await Tool.updateOne({ _id: id }, { ...body });
+      return response.status(204);
+    } catch (err) {
+      console.log(err);
+      return response.status(400).json({ err });
+    }
+  }
 }
 
 export default new ToolController();
