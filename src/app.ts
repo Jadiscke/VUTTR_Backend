@@ -1,7 +1,7 @@
 import server from "./server";
-import dotenv from "dotenv";
+import { init } from "./utils";
 
-const result = dotenv.config();
+init();
 
 const PORT: String = process.env.PORT ? process.env.PORT : "3000";
 console.log(typeof process.env.PORT);
