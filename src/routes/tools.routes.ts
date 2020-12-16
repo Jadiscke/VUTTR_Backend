@@ -1,5 +1,4 @@
 import { Router } from "express";
-import ToolController from "../controllers/toolsController";
 import toolsController from "../controllers/toolsController";
 
 const PATH = "/tools";
